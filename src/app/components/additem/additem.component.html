@@ -1,5 +1,11 @@
-<form action="">
+<form action="" (ngSubmit)="onSubmit()">
     <h2>Registrar un neuvo articulo</h2>
+
+    <div>
+        <label for="">Id</label>
+        <input type="text" name="id" id="" [(ngModel)]="id">
+    </div>
+
     <div>
         <label for="">Nombre</label>
         <input type="text" name="title" id="" [(ngModel)]="title">

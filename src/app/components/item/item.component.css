@@ -3,6 +3,11 @@
     box-sizing: border-box;
 }
 
+.row:hover {
+    border-radius: 3px;
+    background-color: #ccc;
+}
+
 div {
     padding: 5px 0;
 }
@@ -44,4 +49,19 @@ div {
     text-align: center;
     box-sizing: border-box;
     padding: 0 5px;
+}
+
+.actions button {
+    border: none;
+    font-size: 12px;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.actions button:hover {
+    background-color: darkred;
 }
