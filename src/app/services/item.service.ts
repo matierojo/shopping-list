@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 export class ItemService {
   
   url:string = environment.apiUrl;
+
   httpOptions = {
     headers: {
       'Content-Type': 'application/json'
@@ -43,11 +44,19 @@ export class ItemService {
 
   getItems():Observable<Item[]> {
     // return this.items;
-    return this.http.get<Item[]>(this.url + 'items');
+    return this.http.get<Item[]>(`${this.url}/items`);
   }
 
   addItem(item:Item):Observable<Item> {
     // this.items.unshift(item);
-    return this.http.post<Item>(this.url + 'items/', item, this.httpOptions)
+    return this.http.post<Item>(`${this.url}/items/`, item, this.httpOptions);
+  }
+
+  getItem(id:number):Observable<Item> {
+    return this.http.get<Item>(`${this.url}/items/${id}`);
+  }
+
+  updateItem(item:Item):Observable<Item> {
+    return this.http.put<Item>(`${this.url}/items/${item.id}/`, item, this.httpOptions);
   }
 }

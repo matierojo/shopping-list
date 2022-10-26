@@ -1,26 +1,30 @@
 <div class="row" [ngClass]="{'completed': item.completed}">
     <div class="title">
         <input type="checkbox" [checked]="item.completed" (change)="onToggle(item)">
-        {{ item.title | uppercase }}
+        <label for="">{{ item.title | uppercase }}</label>
     </div>
 
-    <div class="price">
+    <div class="price" style="padding-top: 4px;">
         {{ item.price | currency }}
     </div>
 
-    <div class="quantity">
+    <div class="quantity" style="padding-top: 4px;">
         {{ item.quantity }}
     </div>
     
-    <!-- <div class="completed">
+    <!-- <div class="completed" style="padding-top: 4px;">
         {{ item.completed ? "Completado" : "Por completar" }}
     </div> -->
 
-    <div class="total">
+    <div class="total" style="padding-top: 4px;">
         {{ (item.price * item.quantity) | currency }}
     </div>
 
-    <div class="actions">
+    <div class="actions delete">
         <button (click)="onDelete(item)">Eliminar</button>
+    </div>
+    
+    <div class="actions update">
+        <button (click)="onUpdate()">Modificar</button>
     </div>
 </div>

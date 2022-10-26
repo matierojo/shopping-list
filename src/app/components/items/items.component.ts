@@ -20,10 +20,10 @@ export class ItemsComponent implements OnInit {
     // this.items = this.itemService.getItems();
 
     this.itemService.getItems().subscribe(data => {
-      this.items = data;
+      this.items = data;  
+      this.getTotal();
     })
 
-    this.getTotal();
   }
 
   deleteItem(item: Item) {
@@ -32,6 +32,10 @@ export class ItemsComponent implements OnInit {
   }
 
   toggleItem(item: Item) {
+    this.getTotal();
+  }
+  
+  putItem(item: Item) {
     this.getTotal();
   }
 

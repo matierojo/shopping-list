@@ -1,0 +1,40 @@
+<form action="" (ngSubmit)="onUpdate()">
+    <h2>Modificar articulo:</h2>
+
+    <div style="display: flex;">
+        <div class="col-4" style="width: 100%;">
+            <label for="">Id</label>
+        </div>
+        <div class="col-8">
+            <input type="text" name="id" id="" [(ngModel)]="item.id">
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div class="col-4" style="width: 100%;">
+            <label for="">Nombre</label>
+        </div>
+        <div class="col-8">
+            <input type="text" name="title" id="" [(ngModel)]="item.title">
+        </div>
+    </div>
+    
+    <div style="display: flex;">
+        <div class="col-4" style="width: 100%;">
+            <label for="">Precio</label>
+        </div>
+        <div class="col-8">
+            <input type="text" name="price" id="" [(ngModel)]="item.price">
+        </div>
+    </div>
+
+    <div style="display: flex;">
+        <div class="col-4" style="width: 100%;">
+            <label for="">Cantidad</label>
+        </div>
+        <div class="col-8">
+            <input type="text" name="quantity" id="" [(ngModel)]="item.quantity">
+        </div>
+    </div>
+
+    <input type="submit" value="Modificar">
+</form>

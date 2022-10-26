@@ -12,6 +12,11 @@ div {
     padding: 5px 0;
 }
 
+div label {
+    padding-top: 4px;
+    padding-left: 4px;
+}
+
 .title {
     display: flex;
     width: 50%;
@@ -64,4 +69,12 @@ div {
 
 .actions button:hover {
     background-color: darkred;
+}
+
+.actions.update button {
+    background-color: rgb(23, 55, 160);
+}
+
+.actions.update button:hover {
+    background-color: darkblue;
 }

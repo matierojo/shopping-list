@@ -10,6 +10,7 @@ import { TotalComponent } from './components/total/total.component';
 import { AdditemComponent } from './components/additem/additem.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PutitemComponent } from './components/putitem/putitem.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     ItemsComponent,
     ItemComponent,
     TotalComponent,
-    AdditemComponent
+    AdditemComponent,
+    PutitemComponent
   ],
   imports: [
     BrowserModule,
